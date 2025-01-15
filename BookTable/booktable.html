@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Freckle+Face&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Special+Elite&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yatra+One&display=swap"
+    rel="stylesheet">
+  <title>Book your Table</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-79deg, #341a05, #562e0e, #b4590e 50%);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+
+  .book-table {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .table-head {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+    padding: 30px;
+  }
+
+  .table-head img {
+    width: 200px;
+  }
+
+  .table-head h2 {
+    color: #49270b;
+    font-size: 3rem;
+  }
+
+  /*********************FORM*************************/
+  .form {
+    flex: 1;
+    position: relative;
+    left: 28rem;
+    width: 578.6px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .form #bookingForm {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    gap: 10px 88px;
+  }
+
+  .form #bookingForm button {
+    left: 10rem;
+    cursor: pointer;
+    background-color: #793a05;
+    border-radius: 5px;
+    position: relative;
+    color: #ffae16;
+    border-style: none;
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input {
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    color: #793a05;
+    border-style: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  input::placeholder {
+    color: #793a05;
+  }
+
+  input[type=text],
+  input[type=tel],
+  input[type=date],
+  input[type=text] {
+    border: 1px solid #ccc;
+
+  }
+
+  .form-group select {
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: #793a05;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffae16;
+  }
+
+  .slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 69px;
+  }
+
+  .slot {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #793a05;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .slot:hover {
+    background-color: #e0e0e0;
+  }
+
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+  }
+</style>
+
+<body>
+
+  <div class="book-table">
+    <div class="table-head">
+      <img src="book-removebg-preview.png" alt="">
+      <h2>Book Your Table!</h2>
+    </div>
+  </div>
+
+  <div class="form">
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="guests">Guests</label>
+        <select id="guests" name="guests">
+          <option value="1">1 guest</option>
+          <option value="2">2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="meal">Meal</label>
+        <select id="meal" name="meal">
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Select Slot</label>
+        <div class="slots" id="slots">
+          <div class="slot" data-time="11:00 AM">11:00 AM </div>
+          <div class="slot" data-time="01:00 PM">01:00 PM </div>
+          <div class="slot" data-time="03:30 PM">03:30 PM </div>
+          <div class="slot" data-time="05:30 PM">05:30 PM </div>
+          <div class="slot" data-time="07:30 PM">07:30 PM </div>
+          <div class="slot" data-time="09:30 PM">09:30 PM </div>
+        </div>
+      </div>
+      <input type="hidden" id="selectedSlot" name="selectedSlot">
+      <button type="submit">Book Table</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;"></div>
+  </div>
+
+</body>
+<script>
+
+  // Handle slot selection
+  const slotsContainer = document.getElementById("slots");
+  const selectedSlotInput = document.getElementById("selectedSlot");
+
+  // Add click event to each slot
+  slotsContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("slot")) {
+      // Remove the "selected" class from all slots
+      document.querySelectorAll(".slot").forEach(slot => {
+        slot.classList.remove("selected");
+      });
+
+      // Add the "selected" class to the clicked slot
+      event.target.classList.add("selected");
+
+      // Set the value of the hidden input
+      selectedSlotInput.value = event.target.dataset.time;
+    }
+  });
+
+
+  // Handle form submission
+  const bookingForm = document.getElementById("bookingForm");
+  const resultDiv = document.getElementById("result");
+
+  bookingForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    // Fetch form values
+    let Name = document.getElementById("name").value;
+    let Contact = document.getElementById("contact").value;
+    const Date = document.getElementById("date").value;
+    const Guests = document.getElementById("guests").value;
+    const Meal = document.getElementById("meal").value;
+    const Slot = selectedSlotInput.value;
+
+    // Validate contact number
+    // Remove the +91 if it's part of the input, for validation
+    if (Contact.startsWith("+91")) {
+      Contact = Contact.slice(3);  // Removes the "+91" prefix
+    }
+
+    // Validate contact number: 10 digits after +91
+    if (!/^\d{10}$/.test(Contact)) {
+      alert("Please enter a valid 10-digit contact number.");
+      return;
+    }
+
+    // Proceed with booking logic
+    alert(`Booking confirmed for ${Name}. Contact: +91${Contact}`);
+
+    // Generate a random table number (e.g., between 1 and 20)
+    const tableNumber = Math.floor(Math.random() * 20) + 1;
+
+    // Display the result
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `
+      <p><strong>Booking Details:</strong></p>
+      <p>Name: ${Name}</p>
+      <p>Contact: ${Contact}</p>
+      <p>Date: ${Date}</p>
+      <p>Guests: ${Guests}</p>
+      <p>Meal: ${Meal}</p>
+      <p>Slot: ${Slot}</p>
+      <p>Table Number: ${tableNumber}</p>
+    `;
+  });
+</script>
+
+
+</html>
