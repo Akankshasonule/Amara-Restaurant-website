@@ -1,0 +1,229 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-79deg, #341a05, #562e0e, #b4590e 50%);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+
+  .book-table {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .table-head {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+    padding: 30px;
+  }
+
+  .table-head img {
+    width: 200px;
+  }
+
+  .table-head h2 {
+    color: #49270b;
+    font-size: 3rem;
+  }
+
+  /*********************FORM*************************/
+  .form {
+    flex: 1;
+    position: relative;
+    left: 26rem;
+    width: 578.6px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .form #bookingForm {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    gap: 10px 88px;
+  }
+
+  .form #bookingForm button {
+    left: 10rem;
+    cursor: pointer;
+    background-color: #793a05;
+    border-radius: 5px;
+    position: relative;
+    color: #ffae16;
+    border-style: none;
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input {
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    color: #793a05;
+    border-style: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  input::placeholder {
+    color: #793a05;
+  }
+
+  input[type=text],
+  input[type=tel],
+  input[type=date],
+  input[type=text] {
+    border: 1px solid #ccc;
+
+  }
+
+  .form-group select {
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: #793a05;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffae16;
+  }
+
+  .slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 69px;
+  }
+
+  .slot {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #793a05;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .slot:hover {
+    background-color: #e0e0e0;
+  }
+
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  @media (max-width: 1200px) {
+    .form {
+      left: 5rem;
+      width: 70%;
+    }
+
+    .table-head h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .book-table {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .table-head img {
+      width: 150px;
+    }
+
+    .table-head h2 {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+
+    .form {
+      left: 9px;
+      width: 90%;
+      padding: 1.5rem;
+    }
+
+    .form #bookingForm {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form #bookingForm button {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    .table-head{
+      gap: 10px;
+    }
+    .table-head img {
+      width: 100px;
+    }
+
+    .table-head h2 {
+      font-size: 1.2rem;
+    }
+
+    .form {
+      padding: 1rem;
+      width: 95%;
+    }
+
+    .form-group input,
+    .form-group select,
+    .slot {
+      width: 100%;
+    }
+
+    .slots {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
